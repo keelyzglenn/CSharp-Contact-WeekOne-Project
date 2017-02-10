@@ -1,0 +1,16 @@
+@* /created/contact *@
+
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+
+<h1>Your New Contact:</h1>
+<ul>
+
+  <h1>@Model.GetName()</h1>
+  <h3>@Model.GetAddress()</h3>
+  <h3>@Model.GetNumber()</h3>
+
+  <p><a href="/">View all Contacts</a></p>
+
+</ul>

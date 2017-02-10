@@ -19,10 +19,16 @@ namespace Contacts
         return View["new_contact.cshtml"];
       };
 // posts the new contact information on the index page
-      Post["/"] = _ =>{
+      // Post["/"] = _ =>{
+      //   Contact newContact = new Contact(Request.Form["new-name"], Request.Form["new-address"], Request.Form["new-number"]);
+      //   List<Contact> allContacts = Contact.GetAll();
+      //   return View["index.cshtml", allContacts];
+      // };
+// posts the new contact information on its on confirmation page
+
+      Post["/created/contact"] = _ =>{
         Contact newContact = new Contact(Request.Form["new-name"], Request.Form["new-address"], Request.Form["new-number"]);
-        List<Contact> allContacts = Contact.GetAll();
-        return View["index.cshtml", allContacts];
+        return View["created_contact.cshtml", newContact];
       };
 // display each individual contact when name is clicked
       Get["/contact/{id}"] = parameters => {
