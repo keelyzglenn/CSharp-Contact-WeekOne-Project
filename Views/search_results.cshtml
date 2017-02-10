@@ -1,0 +1,15 @@
+@* /search/result *@
+
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+
+<h1>Search Results</h1>
+  @if(@Model != null) {
+  <li>@Model.GetName()</li>
+
+  } else {
+    <h2>No Contact Found</h2>
+  }
+
+<p><a href="/">Go Back Home</a></p>

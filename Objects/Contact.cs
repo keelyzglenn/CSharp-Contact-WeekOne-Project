@@ -65,5 +65,17 @@ namespace Contacts.Objects
       {
         return _instances[searchId-1];
       }
+// search
+      public static Contact SearchContact(string searchName)
+      {
+        foreach (Contact contactName in _instances)
+        {
+         if(contactName.GetName() == searchName)
+          {
+            return contactName;
+          }
+        }
+        return null;
+      }
   }
 }
