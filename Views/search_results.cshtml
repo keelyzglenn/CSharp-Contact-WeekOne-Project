@@ -4,17 +4,17 @@
   Layout="Shared/_Layout.cshtml";
 }
 <div class="space">
-<h1>Search Results</h1>
-@if(@Model != null)
-{
-  <p>@Model.GetName()</p>
-  <p>@Model.GetAddress()</p>
-  <p>@Model.GetNumber()</p>
-}
-else
-{
-  <h2>No Contact Found</h2>
-}
+  <h1>Search Results</h1>
+  @if(@Model != null)
+  {
+    <p>@Model.GetName()</p>
+    <p>@Model.GetAddress()</p>
+    <p>@Model.GetNumber()</p>
+  }
+  else
+  {
+    <h2>No Contact Found</h2>
+  }
 
-<p><a href="/">Go Back Home</a></p>
+  <p><a href="/">Go Back Home</a></p>
 </div>
