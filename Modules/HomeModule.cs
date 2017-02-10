@@ -21,7 +21,7 @@ namespace Contacts
 // posts the new contact information on the index page
       Post["/"] = _ =>{
         Contact newContact = new Contact(Request.Form["new-name"], Request.Form["new-address"], Request.Form["new-number"]);
-        List<Contact> allContacts = Contacts.GetAll();
+        List<Contact> allContacts = Contact.GetAll();
         return View["index.cshtml", allContacts];
       };
 // display each individual contact when name is clicked
@@ -31,7 +31,7 @@ namespace Contacts
       };
 
 // uses form button to clear all contacts
-      Post["/tamagotchis/cleared"] = _ => {
+      Post["/contacts/cleared"] = _ => {
       Contact.ClearAll();
       return View["contacts_cleared.cshtml"];
     };

@@ -1,4 +1,4 @@
-using Sytems.Collections.Generic;
+using System.Collections.Generic;
 
 
 namespace Contacts.Objects
@@ -6,11 +6,11 @@ namespace Contacts.Objects
   public class Contact{
     private string _name;
     private string _address;
-    private int _number;
+    private string _number;
     private int _id;
     private static List<Contact> _instances = new List<Contact>{};
 
-    public Contact(string contactName, string contactAddress, int contactNumber)
+    public Contact(string contactName, string contactAddress, string contactNumber)
     {
       _name = contactName;
       _address = contactAddress;
@@ -37,11 +37,11 @@ namespace Contacts.Objects
       _address = newAddress;
     }
 // number
-    public int GetNumber()
+    public string GetNumber()
     {
       return _number;
     }
-    public void SetNumber(int newNumber)
+    public void SetNumber(string newNumber)
     {
       _number = newNumber;
     }
