@@ -8,7 +8,7 @@
 
   @foreach (var contact in Model)
   {
-    <p class="add-search"><a href="/contact/@contact.GetId()">@contact.GetName()</a></p>
+    <p class="add"><a href="/contact/@contact.GetId()">@contact.GetName()</a></p>
   }
 
   <p><a href="/contact/new">Add a New Contact</a></p>
