@@ -3,12 +3,12 @@
 @{
   Layout="Shared/_Layout.cshtml";
 }
+<div class="space">
+  <h1>Contacts</h1>
 
-<h1>Contacts</h1>
-<ul>
   @foreach (var contact in Model)
   {
-    <p><a href="/contact/@contact.GetId()">@contact.GetName()</a></p>
+    <p class="add-search"><a href="/contact/@contact.GetId()">@contact.GetName()</a></p>
   }
 
   <p><a href="/contact/new">Add a New Contact</a></p>
@@ -16,4 +16,4 @@
   <form action="/contacts/cleared" method="post">
     <button type="submit" name="button">Clear Contacts</button>
   </form>
-</ul>
+</div>

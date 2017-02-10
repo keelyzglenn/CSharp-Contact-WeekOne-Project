@@ -1,0 +1,17 @@
+body {
+  margin: 40px;
+  text-align: right;
+}
+
+.container {
+  background-image: url("https://s-media-cache-ak0.pinimg.com/originals/7d/1f/81/7d1f81ee9bd7d0ea137b3b13924dce57.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 1000px;
+  width: 800px;
+}
+
+.space {
+  margin-top: 200px;
+}
