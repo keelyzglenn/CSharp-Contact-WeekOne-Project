@@ -30,18 +30,18 @@ namespace Contacts
       };
 // uses form button to clear all contacts
       Post["/contacts/cleared"] = _ => {
-      Contact.ClearAll();
-      return View["contacts_cleared.cshtml"];
+        Contact.ClearAll();
+        return View["contacts_cleared.cshtml"];
       };
 // adds search functionality
       Get["/search/contacts"] = _ => {
         return View["search_contacts.cshtml"];
-        };
+      };
 // posts results of search
-        Post["/search/result"] = _ => {
-          Contact foundContact = Contact.SearchContact(Request.Form["search-contact"]);
-          return View["search_results.cshtml", foundContact];
-        };
+      Post["/search/result"] = _ => {
+        Contact foundContact = Contact.SearchContact(Request.Form["search-contact"]);
+        return View["search_results.cshtml", foundContact];
+      };
     }
   }
 }

@@ -50,32 +50,33 @@ namespace Contacts.Objects
     {
       return _id;
     }
+
 // instances
     public static List<Contact> GetAll()
-      {
-        return _instances;
-      }
+    {
+      return _instances;
+    }
 
-      public static void ClearAll()
-      {
-        _instances.Clear();
-      }
+    public static void ClearAll()
+    {
+      _instances.Clear();
+    }
 
-      public static Contact Find(int searchId)
-      {
-        return _instances[searchId-1];
-      }
+    public static Contact Find(int searchId)
+    {
+      return _instances[searchId-1];
+    }
 // search
-      public static Contact SearchContact(string searchName)
+    public static Contact SearchContact(string searchName)
+    {
+      foreach (Contact contactName in _instances)
       {
-        foreach (Contact contactName in _instances)
+        if(contactName.GetName() == searchName)
         {
-         if(contactName.GetName() == searchName)
-          {
-            return contactName;
-          }
+          return contactName;
         }
-        return null;
       }
+      return null;
+    }
   }
 }
