@@ -24,6 +24,11 @@ namespace Contacts
         List<Contact> allContacts = Contacts.GetAll();
         return View["index.cshtml", allContacts];
       };
+// display each individual contact when name is clicked
+      Get["/contact/{id}"] = parameters => {
+        Contact contact = Contact.Find(parameters.id);
+        return View["contact.cshtml", contact];
+      };
 
 // uses form button to clear all contacts
       Post["/tamagotchis/cleared"] = _ => {

@@ -1,0 +1,12 @@
+@* /contacts/{id} *@
+
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+
+
+<h1>@Model.GetName()</h1>
+<h3>@Model.GetAddress()</h3>
+<h3>@Model.GetNumber()</h3>
+
+<p><a href="/">View Contacts</a></p>

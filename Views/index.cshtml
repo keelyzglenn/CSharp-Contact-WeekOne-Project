@@ -6,7 +6,7 @@
 <ul>
   @foreach (var contact in Model)
   {
-    <p><a href=""></a></p>
+    <p><a href="/contact/@contact.GetId()">@contact.GetName()</a></p>
   }
 
   <p><a href="/contact/new">Add a New Contact</a></p>
