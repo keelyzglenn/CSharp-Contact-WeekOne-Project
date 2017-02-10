@@ -1,5 +1,5 @@
 using Nancy;
-using Contact.Objects;
+using Contacts.Objects;
 using System.Collections.Generic;
 
 
